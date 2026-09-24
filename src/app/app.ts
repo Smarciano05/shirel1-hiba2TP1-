@@ -1,17 +1,19 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Carre } from './carre/carre';
+
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Carre],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
   protected readonly title = signal('shirel1hiba2TP1-');
-  couleurClique = "white";
-  cliquerCouleur(couleur:string){
-    this.couleurClique=couleur;
+
+  couleurClique = 'white';
+
+  cliquerCouleur(couleur: string) {
+    this.couleurClique = couleur;
   }
 }
-
-
